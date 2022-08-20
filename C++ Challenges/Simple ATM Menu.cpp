@@ -11,7 +11,7 @@ int main(){
         std::cout << "\nA - add money\nS - send money\nW - withdraw money\nB - balance\nQ - Quit" << std::endl;
         std::cin >> input;
         
-        switch (input)
+        switch (input) // menu
         {
         // Add money
         case 'A': // can't use || logic operator bc of that used 'falling through'. There is no break statetment so that case'A' trigers case'a'
