@@ -6,8 +6,9 @@ using std::vector;
 int main(){
 
     int sum, holder = 0;
+
     vector<vector<int>> vec 
-    {
+    {                                                                 //16 row
         {8, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 8},
         {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00},
         {81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65},
@@ -24,33 +25,67 @@ int main(){
         {19, 80, 81, 68, 05, 94, 47, 69, 28, 73, 92, 13, 86, 52, 17, 77, 04, 89, 55, 40},
         {04, 52, 8, 83, 97, 35, 99, 16, 07, 97, 57, 32, 16, 26, 26, 79, 33, 27, 98, 66},
         {88, 36, 68, 87, 57, 62, 20, 72, 03, 46, 33, 67, 46, 55, 12, 32, 63, 93, 53, 69},
-        {04, 42, 16, 73, 38, 25, 39, 11, 24, 94, 72, 18, 8, 46, 29, 32, 40, 62, 76, 36},
+        {04, 42, 16, 73, 38, 25, 39, 11, 24, 94, 72, 18, 8, 46, 29, 32, 40, 62, 76, 36}, //16 line 
         {20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 04, 36, 16},
         {20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54},
         {01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
     };
 
     //left to right
-    for (size_t k = 0; k <= 20; k++)
+    for (size_t k = 0; k <= 16; k++)
     {
-        for (size_t i = 0; i <= 17; i++)
+        for (size_t i = 0; i <= 16; i++)
         {
-            sum = vec.at(k).at(i) * vec.at(k).at(i+1) * vec.at(k).at(i+2) * vec.at(k).at(i+3);
+            // left to right for k<=16
+            sum = vec.at(k).at(i) * vec.at(k).at(i+1) * vec.at(k).at(i+2) * vec.at(k).at(i+3); 
             if(sum > holder)
                 holder = sum;
+
+            // left to right for k>=16
+            if (k>=14)
+            {
+                sum = vec.at(k+3).at(i) * vec.at(k+3).at(i+1) * vec.at(k+3).at(i+2) * vec.at(k+3).at(i+3); 
+                if(sum > holder)
+                    holder = sum;
+            }
+
+            // up to down for i <= 16
+            sum = vec.at(k).at(i) * vec.at(k+1).at(i) * vec.at(k+2).at(i) * vec.at(k+3).at(i); 
+            if(sum > holder)
+                holder = sum;
+
+            // up to down for i >= 16
+            if(i>=14)
+            {
+                sum = vec.at(k).at(i+3) * vec.at(k+1).at(i+3) * vec.at(k+2).at(i+3) * vec.at(k+3).at(i+3); 
+                if(sum > holder)
+                    holder = sum;
+            }
+
+            // diagonally up-left to right-down ( \ )
+            sum = vec.at(k).at(i) * vec.at(k+1).at(i+1) * vec.at(k+2).at(i+2) * vec.at(k+3).at(i+3); 
+            if(sum > holder)
+                holder = sum;
+            
+            // diagonally up-right to left-down ( / ) but i <=16
+            if (i>=3)
+            {
+                sum = vec.at(k).at(i) * vec.at(k+1).at(i-1) * vec.at(k+2).at(i-2) * vec.at(k+3).at(i-3);
+                if(sum > holder)
+                    holder = sum;
+            }
+            
+            // diagonally up-right to left-down ( / ) but i >=16
+            if (i>=14)
+            {
+                sum = vec.at(k).at(i+3) * vec.at(k+1).at(i+2) * vec.at(k+2).at(i+1) * vec.at(k+3).at(i);
+                if(sum > holder)
+                    holder = sum;
+            }
         }
     }
 
-    //up  down
-    for (size_t i = 0; i <= 20; i++)
-    {
-        for (size_t k = 0; k <= 17; k++)
-        {
-            sum = vec.at(k).at(i) * vec.at(k+1).at(i) * vec.at(k+2).at(i) * vec.at(k+3).at(i);
-            if(sum > holder)
-                holder = sum;
-        }
-    }
     std::cout << holder;
+
     return 0;    
 }
