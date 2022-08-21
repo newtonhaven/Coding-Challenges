@@ -12,7 +12,7 @@ for (int a = 1; a < 1000; a++)
             if( a*a + b*b == c*c && a + b + c == 1000 )
             {
             std::cout << a * b * c;
-            stoper = true;      // for stop outest loop. Because break in here just stop first for loop from inside but other loops start again program
+            stoper = true;  // for stop outest loop. Because break in here just stop first for loop from inside but other loops start again program
             }
         }
     } 

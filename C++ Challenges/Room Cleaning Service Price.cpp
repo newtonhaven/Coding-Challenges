@@ -3,7 +3,7 @@
 int main(){
     int smallroom, bigroom;
 
-    std::cout << " Welcome to the Mr.T's Room Cleaning Service" << std::endl;
+    std::cout << "Welcome to the Mr.T's Room Cleaning Service" << std::endl;
     std::cout << "How many small rooms would you like to cleaned: ";
     std::cin >> smallroom;
 

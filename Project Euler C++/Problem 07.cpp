@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    vector<int> vec {2}; // first prime placed in zero position of vector.
+    vector<int> vec {2};    // first prime placed in zero position of vector.
     for (size_t i = 3; vec.size() <= 10000 ; i++)
     {
         bool check = true;  // condition begins in true

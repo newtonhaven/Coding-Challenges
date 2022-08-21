@@ -4,7 +4,7 @@ int main(){
 
 int sqrsum =0,sum =0;
 
-    for (size_t x = 1; x <= 100; x++)  // Loop for numbers from 1 to 100
+    for (size_t x = 1; x <= 100; x++)   // Loop for numbers from 1 to 100
     {
         sqrsum += (x*x);    //1^1 + 2^2 + 3^3 +....
         sum += x;           // 1 + 2 + 3 + 4 +.... 

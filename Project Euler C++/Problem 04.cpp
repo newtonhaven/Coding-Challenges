@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-vector<int> palindromes{0}; //vector storage all palindromes, used vector because don't know how many palondromes
+vector<int> palindromes{0}; // vector storage all palindromes, used vector because don't know how many palondromes
 
     for (size_t i = 999; i > 100; i--)     //   two for loop for compare product of
     {                                      //   of all the numbers with each other
@@ -23,12 +23,12 @@ vector<int> palindromes{0}; //vector storage all palindromes, used vector becaus
             num = num / 10;
             }while (num != 0);
 
-            if (n == rev)                   //if number is palindromes, adds to the vector
+            if (n == rev)       // if number is palindromes, adds to the vector
             {
                palindromes.push_back(n);
             }
         } 
     }
-    cout << *max_element(palindromes.begin(),palindromes.end()); //print out biggest element(palindrome) in vector
+    cout << *max_element(palindromes.begin(),palindromes.end()); // print out biggest element(palindrome) in vector
    return 0; 
 }

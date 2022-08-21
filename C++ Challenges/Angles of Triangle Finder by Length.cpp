@@ -8,7 +8,7 @@ int main(){
 
     double length1, length2, length3;
     cout << "\nWelcome to the angle finder\n" << endl; //welcome message and triangle
-    cout << "          angle1\n             *\n            * *\n   length3 * * * length2\n          * * * *\n   angle2* * * * *angle3\n          length1"<<endl;
+    cout << "          angle1\n             *\n            * *\n   length3 * * * length2\n          * * * *\n   angle2* * * * *angle3\n          length1" << endl;
 
         cout << "Please enter the first length of sides of triangle" << endl;
         cin >> length1;
