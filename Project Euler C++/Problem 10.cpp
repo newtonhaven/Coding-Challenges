@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 
     vector<long long> vec {2};      // first prime placed in zero position of vector.
-    for (long long i = 3; i <= 2000000 ; i++)   //loop from problem 7
+    for (long long i = 3; i <= 2000000 ; i+=2)   //loop from problem 7
     {
         bool check = true;  // condition begins in true
         for (auto x : vec)
@@ -23,7 +23,7 @@ int main(){
 
     long long sum = 0;
 
-    for (auto& n : vec) //range based loop to sum all of elements in vector
+    for (const auto& n : vec) //range based loop to sum all of elements in vector
         sum += n;
   
   cout << sum;

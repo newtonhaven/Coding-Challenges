@@ -6,10 +6,10 @@ using namespace std;
 int main(){
 
     vector<int> vec {2};    // first prime placed in zero position of vector.
-    for (size_t i = 3; vec.size() <= 10000 ; i++)
+    for (size_t i = 3; vec.size() <= 10000 ; i+=2) // increment by 2 bc prime numbers are odd except 2
     {
         bool check = true;  // condition begins in true
-        for (auto x : vec)
+        for (const auto& x : vec)
         {
             if (i % x == 0) // divides number by every element in vector 
             {
