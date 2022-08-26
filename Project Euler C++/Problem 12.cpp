@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main(){
+int main(){ //bad code needed to be get fix
 
     int k = 1, number = 1;
     bool loop = true;
