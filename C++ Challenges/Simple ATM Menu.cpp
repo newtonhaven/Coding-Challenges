@@ -47,6 +47,7 @@ int main(){
             break;
 
         default:
+        std::cout << "Wrong Input Please Enter Valid Input" << std::endl;
             break;
         }
     } while (input != 'Q' && input != 'q' ); //quit
