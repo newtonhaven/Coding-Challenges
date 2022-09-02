@@ -13,7 +13,7 @@ void add(double *sum){ // ADDITION
     {
         cin >> x;
         *sum +=x;
-        cout << "sum = " << *sum << endl;
+        cout << "outcome = " << *sum << endl;
         if(x==0)
             break;
     }
@@ -25,7 +25,7 @@ void sub(double *sum){ // SUBTRACTION
     {
         cin >> x;
         *sum -= x;
-        cout << "sum = " << *sum << endl;
+        cout << "outcome = " << *sum << endl;
         if(x==0)
             break;
     }
@@ -38,7 +38,7 @@ void multi(double *sum){ // MULTIPLIER
         cin >> x;
         cin >> y;
             *sum = x*y;
-        cout << "sum = " << *sum << endl;
+        cout << "outcome = " << *sum << endl;
     }
     
     while (true)
@@ -47,7 +47,7 @@ void multi(double *sum){ // MULTIPLIER
         if(x==0)
             break;
         *sum *=x;
-        cout << "sum = " << *sum << endl;
+        cout << "outcome = " << *sum << endl;
     }
 }
 
@@ -69,7 +69,7 @@ void divide(double *sum){ // DIVIDER
         if(x==0)
             break;
         *sum /=x;
-        cout << "sum = " << *sum << endl;
+        cout << "outcome = " << *sum << endl;
     }
 }
 
