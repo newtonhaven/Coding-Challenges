@@ -1,18 +1,17 @@
 #include <iostream>
 #include <fstream>
 
-bool find_substring(const std::string &find, const std::string &target) {
-    int found = target.find(find);
+bool find_substring(const std::string &findThis, const std::string &target) {
+    int found = target.find(findThis);
     if (found == std::string::npos)
         return false;
     else
         return true;
-        
 }
 
 int main() {
     std::ifstream inFile {};
-    std::string find {};
+    std::string findThis {};
     std::string wordRead {};
     int match = 0;
     
@@ -24,15 +23,15 @@ int main() {
     }
    
     std::cout << "Please enter the word you would like to find how many times written in Romeo and Juliet : ";
-    std::cin >> find;
+    std::cin >> findThis;
 
     while (inFile >> wordRead)
     {
-        if (find_substring(find, wordRead)) 
+        if (find_substring(findThis, wordRead)) 
             match++;      
     }
 
-    std::cout << find << " was found " << match << " times " << std::endl;
+    std::cout << findThis << " was found " << match << " times " << std::endl;
     
     inFile.close();
     return 0;

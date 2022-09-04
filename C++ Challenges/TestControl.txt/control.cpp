@@ -19,7 +19,7 @@ void printMain(const std::string &name, int score){ //prints student names and t
     std::cout << std::setw(15) << std::left << name << std::setw(5) << std::right << score << std::endl;
 }
 
-int scores(const std::string &answer, const std::string &answerKey){
+int scores(const std::string &answer, const std::string &answerKey){ //calculate score
     int score =0;
     for (size_t i = 0; i < answerKey.size() ; i++) 
     {
