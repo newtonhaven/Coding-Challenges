@@ -25,7 +25,7 @@ vector<int> palindromes{0}; // vector storage all palindromes, used vector becau
 
             if (n == rev)       // if number is palindromes, adds to the vector
             {
-               palindromes.push_back(n);
+               palindromes.emplace_back(n);
             }
         } 
     }
