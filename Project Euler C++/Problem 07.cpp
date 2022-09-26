@@ -18,7 +18,7 @@ int main(){
             }
         }
         if (check)  // if conditon is still true adds number to vector
-            vec.emplace_back(i);
+            vec.push_back(i);
   }
   cout << vec.at(10000);
   return 0;

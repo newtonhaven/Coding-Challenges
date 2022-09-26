@@ -18,7 +18,7 @@ int main(){
             }
         }
         if (check)   // if conditon is still true adds number to vector
-            vec.emplace_back(i); 
+            vec.push_back(i); 
   }
 
     long long sum = 0;
