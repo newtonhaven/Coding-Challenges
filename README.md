@@ -9,7 +9,3 @@ Combines separate PDFs into one pdf in alphabetical order
 ## **Contributing**
 
 Contributions to the PDF-Merger project are welcome. Please submit a pull request with any changes you would like to make.
-
-## License
-
-This project is licensed under the terms of the MIT license. Please see the [LICENSE](LICENSE) file for more details.
